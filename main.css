@@ -5,11 +5,7 @@
   }
   
   .user-data-dump {
-    border: 1px solid red;
     margin: 0 auto;
     max-width: 400px;
-    width: 400px;
-    position: fixed;
-    top: 40%;
-    
+    width: 400px;    
   }
