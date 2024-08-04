@@ -10,7 +10,11 @@
     <div class="container">
         <div class="user-data-dump">          
           <p>You are in <span class="location">CITY</span> because your IP address is <span class="ip">IP ADDR</span></p>
-        </div>
+
+        <button onclick="getCity()">Get City</button>
+
+        <p>Clipboard content: <span class="clipboard-content">...</span></p>
+        <button onclick="pasteClipboard()">Paste Clipboard</button>
       </div>
       
       <script src="script.js"></script>

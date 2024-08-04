@@ -10,6 +10,14 @@ async function getCity() {
     } catch (error) {
       document.querySelector('.location').innerText = "UNKNOWN";
     }
-  }
-  
-  getCity();
+}
+
+
+async function pasteClipboard() {
+    try {
+        const text = await navigator.clipboard.readText();
+        document.querySelector('.clipboard-content').innerText = text ? text : "...";
+    } catch (error) {
+        document.querySelector('.clipboard-content').innerText = "N/A";
+    }
+}
