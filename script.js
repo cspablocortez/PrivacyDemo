@@ -21,3 +21,27 @@ async function pasteClipboard() {
         document.querySelector('.clipboard-content').innerText = "N/A";
     }
 }
+
+function displayBatteryLife() {
+  if ('getBattery' in navigator) {
+      navigator.getBattery().then(function(battery) {
+          updateBatteryLevel(battery.level);
+          battery.addEventListener('levelchange', function() {
+              updateBatteryLevel(battery.level);
+          });
+      });
+  } else {
+      console.log("Battery Status API is not supported on this browser.");
+  }
+}
+
+function updateBatteryLevel(level) {
+  const batteryLifeSpan = document.getElementById('battery-life');
+  if (batteryLifeSpan) {
+      const batteryPercentage = Math.round(level * 100) + '%';
+      batteryLifeSpan.textContent = batteryPercentage;
+  } 
+}
+
+// Call the function to display battery life
+displayBatteryLife();

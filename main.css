@@ -1,11 +1,42 @@
+:root {
+  --accent-color: #1f7de1;
+  --bg-color: white;
+  --text-color: #222;
+  --grey: #6e6e73;
+  --code-background-color: #f2f2f2;
+  --code-color: #222;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+      --bg-color: black;
+      --text-color: white;
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 .container {
-    padding: 2rem;
-    font-size: 1.5rem;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-  
-  .user-data-dump {
-    margin: 0 auto;
-    max-width: 400px;
-    width: 400px;    
-  }
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  max-width: 500px;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+small {
+  color: var(--grey);
+}
+
+.site-title {
+  font-size: 3rem;
+}
