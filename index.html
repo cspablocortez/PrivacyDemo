@@ -10,7 +10,10 @@
     
     <div class="container">
 
-      <h2>Your data is not safe.</h2>
+      <h2>Hi, <span id="result">NAME</span></h2>
+
+      <p><strong>Your data is not safe.</strong></p>
+
       <p>Every time you visit a site online, you <strong>broadcast</strong> information about yourself. Anyone who cares can listen in.</p>
 
       <p>Here is some information known about you.</p>
@@ -18,6 +21,31 @@
       <small>Note: This has buttons as part of the development process. Buttons will be deleted in later revisions of this app.</small>
 
       <p style="text-align: center;">&mdash;&mdash;&mdash;</p>
+
+      <form>
+        <label for="firstName">First Name:</label><br>
+        <input type="text" id="firstName" name="firstName" required><br><br>
+
+        <label for="lastName">Last Name:</label><br>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="address">Address:</label><br>
+        <input type="text" id="address" name="address" required><br><br>
+
+        <label for="city">City:</label><br>
+        <input type="text" id="city" name="city" required><br><br>
+
+        <label for="state">State:</label><br>
+        <input type="text" id="state" name="state" required><br><br>
+
+        <label for="zip">Zip Code:</label><br>
+        <input type="text" id="zip" name="zip" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
       
       <div class="user-data-dump">
         

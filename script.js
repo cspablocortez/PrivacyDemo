@@ -12,7 +12,6 @@ async function getCity() {
     }
 }
 
-
 async function pasteClipboard() {
     try {
         const text = await navigator.clipboard.readText();
@@ -43,5 +42,29 @@ function updateBatteryLevel(level) {
   } 
 }
 
-// Call the function to display battery life
 displayBatteryLife();
+
+function findAndDisplayUserName() {
+  let name = findUserName();
+  document.getElementById('result').innerText = "User Name: " + name;
+}
+
+function findUserName() {
+  let cookies = document.cookie.split(';');
+  for (let i = 0; i < cookies.length; i++) {
+      let cookie = cookies[i].trim();
+      if (cookie.startsWith("name=")) {
+          return cookie.split('=')[1];
+      }
+  }
+
+  if (localStorage.getItem('name')) {
+      return localStorage.getItem('name');
+  }
+
+  if (sessionStorage.getItem('name')) {
+      return sessionStorage.getItem('name');
+  }
+
+  return "Name not found";
+}
