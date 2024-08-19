@@ -68,3 +68,32 @@ function findUserName() {
 
   return "Name not found";
 }
+
+function dumpLocalStorage() {
+  const localStorageDump = {};
+  let dumpHtml = '';
+
+  if (localStorage.length === 0) {
+      dumpHtml = '<p>Nothing saved in local storage.</p>';
+  } else {
+      dumpHtml = '<ul>';
+      for (let i = 0; i < localStorage.length; i++) {
+          const key = localStorage.key(i);
+          const value = localStorage.getItem(key);
+          localStorageDump[key] = value;
+          dumpHtml += `<li><strong>${key}</strong>: ${value}</li>`;
+      }
+      dumpHtml += '</ul>';
+  }
+
+  const dumpDiv = document.getElementById('localStorage-dump');
+  if (dumpDiv) {
+      dumpDiv.innerHTML = dumpHtml;
+  } else {
+      console.warn('Div with id "localStorage-dump" not found.');
+  }
+
+  return localStorageDump;
+}
+
+dumpLocalStorage();
