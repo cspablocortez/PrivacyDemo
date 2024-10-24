@@ -1,0 +1,18 @@
+<h1>Hi, <%= @name.capitalize %></h1>
+<p><strong>Your data is not safe.</strong></p>
+<p>Every time you visit a site online, you <strong>broadcast</strong> information about yourself. Anyone can listen in.</p>
+<p>Here is some information known about you.</p>
+
+<p style="text-align: center;">&mdash;&mdash;&mdash;</p>
+
+<h3>Location</h3>
+<p>You are in <span class="location">CITY</span> because your IP address is <span class="ip">IP ADDR</span></p>
+<button onclick="getCity()">Get City</button>
+
+<h3>Content</h3>
+<p>Clipboard content: <span class="clipboard-content">...</span></p>
+<button onclick="pasteClipboard()">Paste Clipboard</button>
+
+<h3>Device Information</h3>
+<p>Your device currently has <span id="battery-life">--</span> battery.</p>
+<button onclick="displayBatteryLife()">Show Battery</button>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Demo</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+  <nav>
+    <h1><a href="/">http://localhost:4567<span style="color: var(--secondary-color)"><%= request.path_info %></span></a></h1>
+  </nav>
+
+  <article>
+    <section>
+      <%= yield %>
+    </section>
+  </article>
+  
+  <script src="/script.js"></script>
+</body>
+</html>
